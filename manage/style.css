@@ -1,0 +1,123 @@
+:root {
+    --body-bg-color: #FFCEC7;
+    --header-bg-color: #E098AE;
+    --header-color: rgb(219, 32, 32);
+    --nav-link-color: white;
+    --title-color: #E098AE;
+    --button-bg-color: #FCE9DA;
+    --button-hover-color: #E098AE;
+    --table-bg-color: #FCE9DA;
+    --table-header-color: #FFD0A6;
+    --border-color: #ddd;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/manage_background.jpg");
+}
+
+header {
+    height: 3vh;
+    padding: 3vh;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+}
+
+.exit {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+h1, h2 {
+    color: var(--title-color);
+}
+
+.content {
+    display: none;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+}
+
+.active {
+    display: block;
+}
+
+.addButton {
+    /* background-color: var(--button-bg-color); */
+    margin: 10px auto 0;
+    display: block;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+button {
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: #1be163
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.backupButton {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+}
+
+
+/* 欢迎 */
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+}
+
+.word {
+    color: aliceblue;
+    opacity: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

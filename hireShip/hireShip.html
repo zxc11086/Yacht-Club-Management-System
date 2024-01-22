@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "./style.css">
+        <script src="./functions.js"></script>
+        <title>游艇租赁</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1 id = "ship-name"></h1>
+                <p id = "hire-price" style="font-size: 20px;"></p>
+            </div>
+            <form onsubmit="event.preventDefault(); release()">
+                <label for="startDate">选择租赁日期:</label>
+                <input type="date" id="startDate" name="startDate" required style="height: 20px;" >  
+                <input type = "number"  id = "days" min="1" max="10" placeholder="请输入租赁天数" required style="height: 19px;width:80px;"> 
+                <button type="submit" class="release-button">提交租赁</button>
+            </form>
+        </div>
+    </body>
+</html>

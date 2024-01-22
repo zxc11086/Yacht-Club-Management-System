@@ -1,0 +1,134 @@
+:root {
+    --lv2: #FFCEC7;
+    --lv4: #E098AE;
+    --lv1: #FCE9DA;
+    --lv3: #FFD0A6;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/manage_background.jpg");
+}
+
+header {
+    height: 3vh;
+    padding: 3vh;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+}
+
+
+.exit {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+h1, h2 {
+    color: var(--lv4);
+}
+
+label {
+    margin-right: 10px;
+    color: var(--lv4);
+}
+
+.content {
+    display: none;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+}
+
+
+.active {
+    display: block;
+}
+
+
+button {
+    background-color: var(--lv1);
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+}
+
+button:hover {
+    background-color: var(--lv4);
+}
+
+form {
+    margin-top: 20px;
+}
+
+.field {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+.field input {
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    font-size: 15px;
+    height: 25px;
+    width: 50px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+}
+
+/* 欢迎 */
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+}
+
+.word {
+    color: aliceblue;
+    opacity: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

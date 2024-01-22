@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "style.css">
+        <script src = "functions.js"></script>
+        <title>Manage</title>
+    </head>
+    <body>
+        <!--导航栏-->
+        <header>
+            <nav>
+                <div>
+                    <a href="../index.html">凯哥游艇俱乐部</a>
+                    <a href="#" onclick="showUsers()">用户</a>
+                    <a href="#" onclick="showShips()">游艇</a>
+                    <a href="#" onclick="showService()"> 服务</a>
+                    <a href="#" onclick="showSearchOrders()">查找订单</a>
+                </div>
+                <div class="exit">
+                    <a href="../index.html" onclick="exit()">注销</a>
+                </div>
+            </nav>
+        </header>
+        <!-- 欢迎 -->
+        <div id="welcome" class="welcome content">
+            <div id="word-container" class="word-container">
+                <span id="word" class="word">Welcome Manager!</span>
+            </div>
+        </div>
+        <!-- 用户管理 -->
+        <div id="users" class="users content">
+            <h2>所有用户</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Name</th>
+                        <th>Sex</th>
+                        <th>Age</th>
+                        <th>Grade</th>
+                        <th>Email</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="usersList"></tbody>
+            </table>
+            <button class="addButton" onclick="addUser()">添加用户</button>
+        </div>
+        <!-- 游艇管理 -->
+        <div id="ships" class="ships content">
+            <h2>所有游艇</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Img</th>
+                        <th>BuyPrice</th>
+                        <th>HirePrice</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="shipsList"></tbody>
+            </table>
+            <button class="addButton" onclick="addShip()">添加游艇</button>
+        </div>
+        <!-- 服务管理 -->
+        <div id="service" class="content">
+            <h2>所有服务</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Img</th>
+                        <th>Price</th>
+                        <th>Nums</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="serviceList"></tbody>
+            </table>
+            <button class="addButton" onclick="addService()">添加服务</button>
+        </div>
+        <!-- 搜索订单 -->
+        <div id="searchOrders" class="searchOrders content">
+            <h2>搜索订单</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <form id="searchForm">
+                    <label for="userId">用户ID:</label>
+                    <input type="text" id="userId" name="userId">
+                    <label for="startDate">开始日期:</label>
+                    <input type="date" id="startDate" name="startDate">
+                    <label for="endDate">结束日期:</label>
+                    <input type="date" id="endDate" name="endDate">
+                    <label for="orderType">订单类型:</label>
+                    <select id="orderType" name="orderType">
+                        <option value="buy">购买订单</option>
+                        <option value="hire">租用订单</option>
+                        <option value="service">服务订单</option>
+                    </select>
+                    <button type="submit" onclick="searchOrders(event)" style="width: 100px;">搜索</button>
+                </form>
+                <button class="backupButton" onclick="backupOrders()">备份全部订单</button>
+            </div>
+            <!-- 游艇购买订单 -->
+            <div id="buyOrders" class="content">
+                <h3>购买订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ShipId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buyShipOrdersList"></tbody>
+                </table>
+            </div>
+            <!-- 游艇租用订单 -->
+            <div id="hireOrders" class="content">
+                <h3>租用订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ShipId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>StartDate</th>
+                            <th>Days</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hireShipOrdersList"></tbody>
+                </table>
+            </div>
+            <!-- 服务订单 -->
+            <div id="serviceOrders" class="content">
+                <h3>服务订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ServiceId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="serviceOrdersList"></tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

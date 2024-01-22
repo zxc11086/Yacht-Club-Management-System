@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    background-image: url("../images/manage_background.jpg");
+}
+
+.register-container {
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(23, 88, 240, 0.881);
+    height: 200px;
+    width: 300px;
+}
+
+.register-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    padding: 10px;
+}
+
+#register-form {
+    padding: 20px;
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.register-button {
+    background-color: #FFCEC7;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register-button:hover {
+    background-color: #E098AE;
+}
+
+.error-message {
+    color: #E098AE;
+}
+

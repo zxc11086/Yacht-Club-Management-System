@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/service_background.jpg);
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+
+.login-container {
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(23, 88, 240, 0.881);
+    height: 300px;
+    width: 300px;
+}
+
+.login-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    color: #fff;
+    padding: 10px;
+}
+
+.login-form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #9c8888;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-button:hover {
+    background-color: #E098AE;
+}
+
+.to_register {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.error-message {
+    color: red;
+}

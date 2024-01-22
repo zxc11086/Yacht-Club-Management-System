@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "style.css">
+        <script src = "functions.js"></script>
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Login</h2>
+            </div>
+            <form class="login-form" onsubmit="event.preventDefault(); login();">
+                <div class="form-group">
+                    <label for="username">username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button class="login-button" type="submit">Login</button>
+                <span id = "Error" class="error-message"></span>
+                </br>
+                <a href="../register/register.html">没有账户？注册一个！</a>
+                </br>
+                <a href="../forget/forget.html">忘记密码？</a>
+            </form>
+        </div>
+    </body>
+</html>

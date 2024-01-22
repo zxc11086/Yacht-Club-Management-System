@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "style.css">
+        <script src = "functions.js"></script>
+        <title>Mine</title>
+    </head>
+    <body>
+        <!--导航栏-->
+        <header>
+            <nav>
+                <div>
+                    <a href="../index.html">凯哥游艇俱乐部</a>
+                    <a href="#" onclick="showMine()">个人信息</a>
+                    <a href="#" onclick="showOrders()">订单</a>
+                </div>
+                <div class="exit">
+                    <a href="../index.html" onclick="exit()">注销</a>
+                </div>
+            </nav>
+        </header>
+        <!-- 欢迎页面 -->
+        <div id="welcome" class="welcome content">
+            <div id="word-container" class="word-container">
+                <span id="word" class="word">Welcome Manager!</span>
+            </div>
+        </div>
+        <!-- 个人信息 -->
+        <div id="profile" class="content">
+            <h1>个人信息</h1>
+            <form>
+                <div class="field">
+                    <label>用户名</label>
+                    <input id="username" class="form-control" placeholder="请输入用户名" disabled="disabled" type="text" >
+                </div>
+                <div class="field">
+                    <label>姓名</label>
+                    <input id="name" placeholder="请输入姓名" type="text">
+                </div>
+                <div class="field">
+                    <label>年龄</label>
+                    <input id="age" placeholder="请输入年龄" type="number">
+                </div>
+                <div class="field">
+                    <label>姓别</label>
+                    <select id="sex" value = "女">
+                        <option value="男">男</option>
+                        <option value="女">女</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>密码*</label>
+                      <input id="password" placeholder="请输入密码" type="password">
+                    </div>
+                <div class="field">
+                    <label class="ui header">新密码</label>
+                      <input id="npassword" placeholder="无需修改密码，请勿填写此项" type="password">
+                </div>
+                <div class="field">
+                      <label class="ui header">确认新密码</label>
+                      <input id="rptpassword" placeholder="无需修改密码，请勿填写此项" type="password">
+                </div>
+                <div class="field">
+                    <label for="email">邮箱</label>
+                    <input id="email" placeholder="请输入邮箱" type="text">
+                </div>
+                <div class="field">
+                    <label id="balance">余额: 0</label>
+                </div>
+                <div class="action">
+                    <button id="submit" onclick="commit()">修改</button>
+                    <button id="reset" onclick= "addProfile(),event.preventDefault();">重置</button>
+                </div>
+            </form>
+        </div>
+            
+        <!-- 所有订单 -->
+        <div id="orders" class="orders content">
+            <h2>所有订单</h2>
+            <!-- 游艇购买订单 -->
+            <div id="buyOrders">
+                <h3>购买订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ShipId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buyShipOrdersList"></tbody>
+                </table>
+            </div>
+            <!-- 游艇租用订单 -->
+            <div id="hireOrders">
+                <h3>租用订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ShipId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>StartDate</th>
+                            <th>Days</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hireShipOrdersList"></tbody>
+                </table>
+            </div>
+            <!-- 服务订单 -->
+            <div id="serviceOrders">
+                <h3>服务订单</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>UserId</th>
+                            <th>ServiceId</th>
+                            <th>Money</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="serviceOrdersList"></tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

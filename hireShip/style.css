@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh
+}
+
+
+.container {
+    backdrop-filter: blur(10px); /* 调整模糊程度 */
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(72, 133, 136, 0.881);
+    height: 300px;
+    width: 300px;
+    flex-direction: column;
+}
+
+.header{
+    color: #fff;
+    text-align: center;
+}
+
+.release-button {
+    background-color: #9c8888;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 70px;
+}
+
+
+.release-button:hover {
+    background-color: #E098AE;
+}
+
+form{
+    padding: 20px;
+    display: block;
+}
+
+label {
+    color: #fff;
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
